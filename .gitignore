@@ -1,1 +1,4 @@
 .env
+secret.json
+node_modules
+env.json
