@@ -2,7 +2,7 @@
   "name": "analytics-light",
   "version": "1.0.0",
   "description": "Light weight app to query bank endpoints for transaction details",
-  "entrypoint": "index.js",
+  "main": "index.js",
   
   "scripts": {
     "start": "node index.js"

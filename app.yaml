@@ -1,3 +1,4 @@
 # app.yaml
 
 runtime: nodejs16
+entrypoint: node index.js
