@@ -16,8 +16,8 @@ jobs:
       run: |-
         wget https://github.com/mikefarah/yq/releases/download/v4.25.1/yq_linux_amd64.tar.gz -O - |\
         tar xz && sudo mv yq_linux_amd64 /usr/bin/yq
-        echo ${{ secrets.GAE_VARIABLES }} | base64 --decode > app.json && cat app.json | yq -P > /home/runner/work/analytics-light/analytics-light/app.yaml && rm app.json
-        cat /home/runner/work/analytics-light/analytics-light/app.yaml
+        echo ${{ secrets.GAE_VARIABLES }} | base64 --decode > app.json && cat app.json | yq -P > /home/runner/work/analytics-349805/analytics-349805/app.yaml && rm app.json
+        cat /home/runner/work/analytics-349805/analytics-349805/app.yaml
 
     - id: 'auth'
       uses: 'google-github-actions/auth@v0'
