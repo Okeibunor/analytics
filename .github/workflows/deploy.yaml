@@ -1,6 +1,6 @@
 # .github/workflows/deploy.yaml
 
-name: Deploy to Google App Engine
+name: Production branch
 on:
   push:
     branches:
