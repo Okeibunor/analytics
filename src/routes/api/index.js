@@ -1,12 +1,23 @@
+const { successfulResponse, notFoundResponse } = require('../../helpers/responses');
+
 var router = require('express').Router();
 
-// router.use('/users', require('./users'));
+router.use('/auth', require('./auth.routes'));
 router.use('/vfd', require('./vfd'));
 
-router.use('/', (req, res) => {
-    return res.status(404).json({
-        msg: 'Route not found'
-    })
+router.get('/', (req, res) => {
+  return successfulResponse({
+    response: res,
+    message: "welcome to financial analytics api"
+  })
+})
+
+
+router.use('/', (req, response) => {
+  return notFoundResponse({
+    response,
+    message: "route not found"
+  })
 })
 
 router.use(function(err, req, res, next){
