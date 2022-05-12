@@ -11,14 +11,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const db = require("./src/models");
-if (node_env == 'development') {
-  db.sequelize.sync({force: true}).then(() => {
-    console.log('Drop and Resync Db');
-    initial();
-  });
-} else {
-  db.sequelize.sync()
-}
+db.sequelize.sync()
 
 const routes = require('./src/routes/index')
 app.use('/', routes)
