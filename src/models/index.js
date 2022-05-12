@@ -8,6 +8,9 @@ const sequelize = new Sequelize(
     host: config.host,
     dialect: config.dialect,
     operatorsAliases: false,
+    dialectOptions: {
+      socketPath: `cloudsql/${process.env.INSTANCE_CONNECTION_NAME}`,
+    },
     pool: {
       max: config.pool.max,
       min: config.pool.min,
