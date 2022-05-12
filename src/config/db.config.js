@@ -5,6 +5,7 @@ module.exports = {
     password: process.env.MYSQL_PASSWORD,
     database: process.env.MYSQL_DB_NAME,
     dialect: process.env.DB_CONNECTION,
+    instance_connection_name: 'analytics-349805:us-central1:financial-analytics',
     pool: {
         max: 5,
         min: 0,
