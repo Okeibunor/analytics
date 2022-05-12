@@ -3,7 +3,7 @@ const Sequelize = require("sequelize");
 const sequelize = new Sequelize(
   config.database,
   config.user,
-  config.password,
+  '4h-}2HM0mjqA(qh.',
   {
     dialect: config.dialect,
     dialectOptions: {
