@@ -5,18 +5,10 @@ const sequelize = new Sequelize(
   config.user,
   config.password,
   {
-    host: config.host,
     dialect: config.dialect,
-    operatorsAliases: false,
     dialectOptions: {
-      socketPath: `cloudsql/${process.env.INSTANCE_CONNECTION_NAME}`,
+      socketPath: `/cloudsql/${process.env.INSTANCE_CONNECTION_NAME}`,
     },
-    pool: {
-      max: config.pool.max,
-      min: config.pool.min,
-      acquire: config.pool.acquire,
-      idle: config.pool.idle
-    }
   }
 );
 const db = {};
