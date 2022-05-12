@@ -7,7 +7,7 @@ const sequelize = new Sequelize(
   {
     dialect: config.dialect,
     dialectOptions: {
-      socketPath: `/cloudsql/${process.env.INSTANCE_CONNECTION_NAME}`,
+      socketPath: `/cloudsql/analytics-349805:us-central1:financial-analytics`,
     },
   }
 );
